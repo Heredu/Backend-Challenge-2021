@@ -3,7 +3,9 @@ const router = require('express').Router();
 const { personaje } = require('../../db');
 
 router.get('/', async (req, res)=> {
-    const characters = await personaje.findAll();
+    const characters = await personaje.findAll({
+        attributes: ['imagen', 'nombre']
+      });
     res.json(characters)
 });
 
