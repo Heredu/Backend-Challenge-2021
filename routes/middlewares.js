@@ -2,7 +2,7 @@ const { check } = require('express-validator');
 const jwt = require('jwt-simple');
 const checkToken = (req, res, next) => {
     if(!req.headers['user-token']){
-        return res.jsno({ error: 'Favor incluir user-token en la cabecera'});
+        return res.json({ error: 'Favor incluir user-token en la cabecera'});
     }
 
     const userToken = req.headers['user-token'];
