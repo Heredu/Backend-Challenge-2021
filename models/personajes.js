@@ -11,6 +11,5 @@ module.exports = (sequelize, type) => {
         peso: type.INTEGER,
         historia: type.STRING,
         asociaciones: type.STRING
-
     })
 }
