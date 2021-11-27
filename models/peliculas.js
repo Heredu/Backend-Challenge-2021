@@ -1,5 +1,5 @@
 module.exports = (sequelize, type) => {
-    return sequelize.define('pelicula-serie', {
+    return sequelize.define('pelicula', {
         id: {
             type: type.INTEGER,
             primaryKey: true,
@@ -7,7 +7,7 @@ module.exports = (sequelize, type) => {
         },
         imagen: type.STRING, //link
         titulo: type.STRING,
-        fecha_creacion: type.DATETIME,
+        fechaCreacion: type.INTEGER,
         calificacion: type.INTEGER,
         personajes: type.STRING
     })
